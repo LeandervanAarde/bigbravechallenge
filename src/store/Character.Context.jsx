@@ -8,6 +8,7 @@ const defaultValues = {
   dateOfBirth: dayjs(Date.now()),
   favoriteColor: "#ffffff",
   occupation: "",
+  occupationString: "",
   headImage: "",
 };
 

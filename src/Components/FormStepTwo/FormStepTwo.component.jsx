@@ -15,6 +15,15 @@ export default function FormStepTwo() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     updateValues(name, value);
+
+    if (name === "occupation") {
+      const selectedOption = option.find((opt) => opt.value === value);
+      if (selectedOption) {
+        updateValues("occupationString", selectedOption.option);
+      } else {
+        updateValues("occupationString", "");
+      }
+    }
   };
 
   const handleColorChange = (color, e) => {

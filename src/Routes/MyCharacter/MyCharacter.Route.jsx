@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import styles from "./MyCharacter.module.scss";
 import Crown from "../../Assets/crown.png";
 import { CharacterContext } from "../../store/Character.Context";
@@ -19,10 +19,16 @@ export default function MyCharacter() {
     clearContext();
   };
 
+  useEffect(() => {
+    console.log(characterValues)
+  },[])
+
   return (
     <div className={styles.container}>
       <div className={styles.container__left}>
         <div className={styles.container__left__character}>
+
+          <div className={styles.container__left__character__circle}></div>
           <img
             src={characterValues.headImage}
             className={styles.container__left__character__head}
@@ -36,10 +42,12 @@ export default function MyCharacter() {
             fill={characterValues.favoriteColor}
             className={styles.container__left__character__pants}
           />
-          <p>
+          <h3>
+            Hey, my name is
             {characterValues.name} {characterValues.surname}
-          </p>
-          <p>{age}</p>
+          </h3>
+          <p> I am {age} years old and I work as a {characterValues.occupationString}</p>
+    
         </div>
       </div>
 
