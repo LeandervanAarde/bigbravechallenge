@@ -113,6 +113,9 @@ For the project I was required to use atleast one dependancy, users are able to 
 ### MUI Date picker
 In order to ease the development process within a limited timeframe, MUI date picker was used in order to capture birthdays. This was used instead of building an entire calendar from scratch and making my MVP achievable. 
 
+##Time to completion
+This project took 7hours and 32 minutes to complete
+
 
 
 <!-- MOCKUPS -->
