@@ -1,0 +1,57 @@
+
+input{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    border-color: transparent;
+    outline: none;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out; 
+}
+
+span{
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    
+}
+.span{
+    color: #FB662D;
+    font-size: 13px;
+    transition: 0.3s ease-in-out; 
+}
+
+.errSpan{
+    color: #ff0000;
+    font-size: 13px;
+    transition: 0.3s ease-in-out;   
+}
+
+.input__focus{
+    display: flex;
+    width: 95%;
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 2px solid #FB662D;
+    outline: none;
+    margin-top: 2px;
+    transition: 0.3s ease-in-out; 
+   
+}
+
+.input__err{
+    display: flex;
+    width: 95%;
+    height: 30px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 2px solid red;
+    outline: none;
+    margin-top: 2px;
+    transition: 0.3s ease-in-out; 
+   
+}

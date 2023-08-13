@@ -1,0 +1,48 @@
+.btn {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  padding: 0 35px 0 35px;
+  cursor: pointer;
+
+  &.primary {
+    background-color: #ff471f;
+    color: white;
+    font-weight: 800;
+    transition: 300ms linear all;
+
+    &:hover {
+      background-color: darken(#ff471f, 14%);
+      transform: scale(1.1);
+      font-size: 15px;
+    }
+  }
+
+  &.secondary {
+    border: 2px solid #ff471f;
+    color: white;
+    font-weight: 800;
+    transition: 300ms linear all;
+
+    &:hover {
+      border: 3px solid darken(#ff471f, 14%);
+      transform: scale(1.1);
+      font-size: 15px;
+    }
+  }
+
+  &.disabled {
+    background-color: #9a9a9a;
+    color: white;
+    font-weight: 800;
+    transition: 300ms linear all;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,57 @@
+.circle {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 60vh;
+  background-color: white;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__pants {
+    width: 110px;
+    margin-top: 20px;
+    object-fit: contain;
+    transform: scale(1.1);
+  }
+
+  &__sliderTrack {
+    animation: scroll 10s linear infinite;
+    width: calc(150px * 11); 
+    padding: 40px;
+    display: flex;
+    max-height: 160px;
+    flex-direction: row;
+  }
+
+  &__sliderTrack2 {
+    animation: scrolling 10s linear infinite;
+    width: calc(150px * 11);
+    padding: 40px;
+    display: flex;
+    max-height: 160px;
+    flex-direction: row;
+  }
+}
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(150px * 4));
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(calc(150px * 4));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

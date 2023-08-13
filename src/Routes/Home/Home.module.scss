@@ -1,0 +1,108 @@
+// Home.module.scss
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  height: 100vh;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__hexContainer, &__animateRight{
+    display: flex;
+
+    flex-basis: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__animateRight{
+    animation: rightContainerTransistion 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  &__animate{
+    animation: leftContainerTransistion 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+  &__leftContainer, &__animate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 60%;
+    height: 100%;
+    padding-left: 20px;
+    gap: 20px;
+    &__greeting {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      &__hi {
+        font-size: 128px;
+        color: #f7f7f7;
+      }
+      @keyframes waver {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(35deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      &__wave {
+        font-size: 128px;
+        color: #f7f7f7;
+        animation: ease-in-out waver 1.5s infinite;
+      }
+    }
+
+    @keyframes showBottomText {
+      0% {
+        transform: translate3d(0, -100%, 0);
+      }
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes leftContainerTransistion {
+      0%{
+        transform: translateX(0%);
+      }
+      100%{
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes rightContainerTransistion {
+      0%{
+        transform: translateX(0%);
+      }
+      100%{
+        transform: translateX(100%);
+      }
+    }
+
+    &__bottomText {
+      animation: showBottomText 0.5s;
+      animation-delay: 1.75s;
+      animation-fill-mode: forwards;
+      top: 0;
+      transform: translate(0, -100%);
+      color: white;
+    }
+  }
+ }
+img {
+  object-fit: contain;
+  height: 120px;
+}

@@ -1,0 +1,33 @@
+.inputs {
+    display: flex;
+
+    width: 100%;
+    flex-basis: 100%;
+    flex-direction: column;
+
+    &__gender {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 20px, 0;
+      gap: 10px;
+      input:where([type="checkbox"], [type="radio"]) {
+        width: 20px;
+
+        background-color: red;
+      }
+
+
+
+      p {
+        color: white;
+      }
+
+
+    }
+
+    &__err{
+      color: red !important;
+      font-size: 10pt;
+    }
+  }

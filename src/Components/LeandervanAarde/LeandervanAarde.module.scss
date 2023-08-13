@@ -1,0 +1,42 @@
+.headingThree{
+    font-size: 14;
+    color: white;
+  }
+
+  .headingFour{
+    font-size: 12;
+    color: white;
+  }
+
+  .createdBy{
+    padding-top: 20px;
+      width: 200px;
+      height: 300px;
+ 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__head{
+        height: 60px;
+      object-fit: contain;
+      }
+
+      &__body{
+        width: 90%;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      }
+
+      &__pants {
+        width: 110px;
+        margin-top: -25px;
+        object-fit: fill;
+        transform: scale(1);
+        position: relative;
+        z-index: 0;
+       margin-left: 10px;
+      }
+    }
